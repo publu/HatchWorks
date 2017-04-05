@@ -1,0 +1,23 @@
+{
+  "name": "hatchworks",
+  "version": "1.0.0",
+  "description": "this is a group project for 4347 database systems class",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/publu/HatchWorks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/publu/HatchWorks/issues"
+  },
+  "homepage": "https://github.com/publu/HatchWorks#readme",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "pg": "^6.1.5"
+  }
+}
