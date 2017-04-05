@@ -1,12 +1,8 @@
 require('dotenv').config()
 var pg = require('pg');
- 
-// instantiate a new client 
-// the client will read connection information from 
-// the same environment variables used by postgres cli tools 
+
 
 var conString = process.env.PG_URL;
-
 var client = new pg.Client(conString);
 
 client.connect(function(err) {
