@@ -1,10 +1,7 @@
 const pg = require('pg');
 require('dotenv').config()
-
-var conString = process.env.PG_URL;
-
+var conString = "postgres://dzluurjf:iUOPz6t0Hbmrpwse_oTOBOyco9yf7VCR@stampy.db.elephantsql.com:5432/dzluurjf";
 const client = new pg.Client(conString);
-
 client.connect();
 
 /* Conditions
@@ -24,7 +21,7 @@ const Nurse = client.query(
 
 /* Patient
 const Patient = client.query(
-  'CREATE TABLE Patient(SSN CHAR(9) PRIMARY KEY, Next_of_Kin VARCHAR(80), LivingWill VARCHAR(80), Name VARCHAR(80), Phone CHAR(10), Address VARCHAR(120), R_Timeslot DATE, O_Timeslot DATE, Insurance varchar(80) references Insurance_Company(Name), R_Room varchar(80) references Room(Room_No), O_Room varchar(80) references Room(Room_No), Tech_SSN char(9) references Technician(SSN), Nurse_SSN char(9) references Nurse(SSN), Surgeon_SSN char(9) references Surgeon(SSN), C_Name VARCHAR(80) references Condition(Name))'
+  'CREATE TABLE Patient(SSN CHAR(9) PRIMARY KEY, Next_of_Kin VARCHAR(80), LivingWill VARCHAR(80), Name VARCHAR(80), Phone CHAR(10), Address VARCHAR(120), R_Timeslot DATE, O_Timeslot DATE, Insurance varchar(80) references Insurance_Company(Name), R_Room INT references Room(Room_No), O_Room INT references Room(Room_No), Tech_SSN char(9) references Technician(SSN), Nurse_SSN char(9) references Nurse(SSN), Surgeon_SSN char(9) references Surgeon(SSN), C_Name VARCHAR(80) references Condition(Name))'
 );*/
 
 /*Room
